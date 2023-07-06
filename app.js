@@ -1,4 +1,4 @@
-// This will run once the page is fully loaded
+// HTML Cheet Sheet 
 window.onload = function() {
     var buttons = document.getElementsByClassName('section-button');
     var contentDiv = document.getElementById('content');
@@ -11,6 +11,7 @@ window.onload = function() {
     }
 
     function loadPage(page) {
+        contentDiv.innerHTML = '';
         var newSection = document.createElement('section');
         switch (page) {
             case 'persona':
@@ -45,7 +46,7 @@ window.onload = function() {
         }
         contentDiv.appendChild(newSection);
 
-        // Add click event listeners to copy buttons
+        // Adds click event listeners to copy buttons
         var copyButtons = document.getElementsByClassName('copy-button');
         for (var i = 0; i < copyButtons.length; i++) {
             copyButtons[i].addEventListener('click', function(event) {
@@ -56,7 +57,7 @@ window.onload = function() {
         }
     }
 
-    // This function generates HTML for a list of prompts
+    // Generates HTML for a list of prompts
     function generatePromptContent(title, promptsWithExamples) {
         var content = '<h2>' + title + '</h2>';
         for (var i = 0; i < promptsWithExamples.length; i++) {
