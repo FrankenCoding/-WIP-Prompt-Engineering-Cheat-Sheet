@@ -1,0 +1,87 @@
+Maximizing Large Language Models: A Cheat Sheet 
+
+Abstract 
+
+In the vast and evolving landscape of artificial intelligence, Large Language Models (LLMs) like GPT have shown remarkable capabilities. However, to maximize their effectiveness, we need to understand their inner workings and craft prompts that play to their strengths. This guide provides a set of strategies to enhance your interaction with LLMs, leveraging their imitation abilities, simulating a working memory, crafting detailed prompts, and complementing them with dedicated tools and human oversight. 
+
+Note: This document compiles state-of-the-art strategies for maximizing the effectiveness of Large Language Models (LLMs) like GPT. These ideas are based on practical experiences and insights shared by leading figures in the field of artificial intelligence, including Andrej Karpathy, Researcher and founding member of OpenAI. However, as the field of AI continues to evolve rapidly, the state-of-the-art today may become the baseline tomorrow.  
+
+ 
+
+Understanding GPT 
+
+Prompt for Success 
+
+LLMs like GPT don't inherently aim for success; they aim to emulate their training data, which contains a blend of success and failure. If you need high-quality outputs, explicitly ask for it. But remember, asking for an output with an 'IQ of 300' might lead GPT off course due to scarce training data of that nature and might turn towards weird behavior like role playing or science fiction. 
+
+*Example*: "Give me a detailed and expert explanation of quantum physics." 
+
+*Reasoning*: GPT balances between correct and incorrect responses from its training data. By explicitly asking for high-quality responses, you steer it towards the successful end of its training data. 
+
+Memory Loading 
+
+GPT doesn't have a working memory like humans do. But you can simulate one by loading the prompt with all relevant information for the task at hand, enabling the model to perform better. 
+
+*Example*: For a summary task, provide an overview or key points about the topic in the prompt. 
+
+*Reasoning*: By providing all relevant information upfront, it becomes immediately accessible to GPT as it generates its response. 
+
+Prompt Crafting 
+
+Backchecking Prompts 
+
+Use the context window to your advantage by having GPT reflect on its own outputs. This allows it to reason about its previous outputs and improve the conversation quality. 
+
+*Example*: "Looking back at your previous answer, can you confirm if it's accurate?" 
+
+*Reasoning*: GPT can analyze its previous output within the context window, providing an opportunity to verify or reflect on its responses. 
+
+Iterative Dialogue 
+
+Break complex tasks down into simpler ones, and handle them one at a time, using each output as input for the next step. This helps maintain a manageable context and keeps the conversation coherent. 
+
+*Example*: For planning a trip, start with choosing a destination, then move to dates, activities, etc. 
+
+*Reasoning*: GPT can struggle with maintaining a lot of context over a long sequence of text. By breaking tasks down, this issue is mitigated. 
+
+Prompt Detailing 
+
+Be explicit with your instructions when crafting prompts for GPT. The more detailed your instructions, the more tailored the output will be. 
+
+*Example*: "Translate the following English text to French, maintaining a formal tone: ..." 
+
+*Reasoning*: GPT doesn't know your intentions unless explicitly stated in the prompt. Detailed instructions guide the model's output. 
+
+Few-Shot Learning 
+
+Providing GPT with a couple of examples in your prompt sets the context and encourages the model to continue the pattern with new input. 
+
+*Example*: For a QA task, give a couple of "Q: question, A: answer" pairs before your question. 
+
+*Reasoning*: GPT is trained to predict the next token in a sequence based on the previous tokens. Providing examples helps the model recognize the pattern. 
+
+Tree of Thoughts Approach 
+
+Maintain multiple conversation threads and choose the most promising one at each step. This helps in generating a more diverse set of responses. 
+
+*Example*: Maintain multiple possible answers to a question and choose the one that fits best. 
+
+*Reasoning*: This approach can help control the direction of the conversation and provide a variety of potential answers to choose from. 
+
+Combining with Other Tools 
+
+Buddy System with Tools 
+
+For tasks that fall into GPT's weaknesses, pass the baton to dedicated tools or plugins. This allows for more accurate and efficient task completion. 
+
+*Example*: Use a math library for complex calculations, and let GPT handle the explanation of the result. 
+
+*Reasoning*: GPT has its strengths and weaknesses. For tasks it struggles with, using a dedicated tool can be more efficient. 
+
+Human Oversight 
+
+Despite its prowess, GPT isn't perfect. Always combine its outputs with human review and refinement to catch and correct any mistakes. 
+
+*Example*: Use GPT to brainstorm or draft, then have a human finalize the work. 
+
+*Reasoning*: Human oversight can catch mistakes or inaccuracies in GPT's output, leading to a more reliable final result. 
